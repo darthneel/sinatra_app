@@ -1,0 +1,24 @@
+
+<form method = "post" action = "/bands/new">
+
+	<div>
+		<label>Band Name:</label>
+		<input type = 'text' name = 'band[band_name]' autofocus />
+	</div>
+	<div>
+		<label> Number of Albums:</label>
+		<input type = 'integer' name = 'band[num_albums]' />
+	</div>
+	<div>
+		<label>Lead Singer:</label>
+		<input type = 'text' name = 'band[lead_singer]' />
+	</div>
+	<div>
+		<label>Has this band won a grammy:</label>
+		<input type="radio" name='band[grammy_won]' value = "true">Yes
+		<input type="radio" name='band[grammy_won]' value = "false">No
+	</div>
+
+		<input type = "submit" value ="Add this band!">
+
+</form>

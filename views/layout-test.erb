@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+	  	<link rel = "stylesheet" type = "text/css" href="/stylesheets/base.css">
+		<link rel = "stylesheet" type = "text/css" href="/stylesheets/skeleton.css">
+		<link rel = "stylesheet" type = "text/css" href="/stylesheets/layout.css">
+		<link rel = "stylesheet" type = "text/css" href="/stylesheets/style.css">
+
+	   
+	   <title>Favorite Bands</title>
+  </head>
+  <body>
+	  	<div class = "container">
+
+			<div class = "sixteen columns" id = "fixedtop">
+				<a href='/'>Home</a> | <a href='/bands/new'>Add a band</a>				
+			</div>	
+			<div class = "sixteen columns" id = "blank"></div>	
+
+		<!-- 	<div class = "row"></div> -->
+
+			
+			<div class = "four columns offset-by-5">
+						
+				<h4>Favorite Bands</h4>	
+			
+				<ul>		
+					<% @all_bands.each do |band| %>
+						<li><a href="/bands/<%= band.id %>/edit"><%= band.band_name %></a></li>
+					<% end %>
+				</ul>
+			</div>
+		  		
+
+
+			<div class = "four columns offset-by-2" id = "yield">
+		    	<%= yield %>
+		    </div>
+
+		   <div class = "sixteen columns" id = "fixedbottom"></div>
+ 	
+		</div>
+  </body>
+</html>

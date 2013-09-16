@@ -1,0 +1,15 @@
+
+<form method = "post" action = "/bands/<%= @bands_id %>/new_member">
+
+	<div>
+		<label>Name of Band Member:</label>
+		<input type = 'text' name = 'band_member[name]' autofocus />
+	</div>
+	<div>
+		<label>Age of New Band Member:</label>
+		<input type = 'integer' name = 'band_member[age]' />
+	</div>
+	
+		<input type = "submit" value ="Add this band member!">
+
+</form>
